@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+    .siblings * {
+        display: block;
+        border: 2px solid lightgrey;
+        color: lightgrey;
+        padding: 5px;
+        margin: 15px;
+    }
+    
+    .siblings pre {
+        border: 1px solid;
+        box-shadow: 1px 1px 5px gray;
+        border: 1px solid black;
+        
+        color: black;
+    }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        /* select all siblings*/
+        $("h2").siblings("p").css({
+            "color": "red",
+            "border": "2px solid red"
+        });
+        /*select next element*/
+        $("h2").next().css({
+            "color": "yellow",
+            "border": "2px solid yellow"
+        });
+        /*select previous element*/
+        $("h2").previous().css({
+            "color": "blue",
+            "border": "2px solid blue"
+        });
+    });
+    </script>
+</head>
+
+<body class="siblings">
+    <div>div (parent)
+        <p>p</p>
+        <span>span</span>
+        <h2>h2</h2>
+        <h3>h3</h3>
+        <p>p</p>
+    </div>
+    <pre>
+      
+        /* select all siblings*/
+        $("h2").siblings("p").css({"color": "red", "border": "2px solid red"});
+     
+        /*select next element*/
+        $("h2").next().css({"color": "yellow", "border": "2px solid yellow"});
+     
+        /*select previous element*/
+        $("h2").previous().css({"color": "blue", "border": "2px solid blue"});
+    </pre>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style type="text/css">
+    pre {
+        border: 1px solid;
+        box-shadow: 1px 1px 5px gray;
+    }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        Name:
+        <input type="text" name="user">
+        <br> Password:
+        <input type="password" name="password">
+        <br>
+        <button type="button">Useless Button</button>
+        <input type="button" value="Another useless button">
+        <br>
+        <input type="reset" value="Reset">
+        <input type="submit" value="Submit">
+        <br> Name:
+        <input type="text" name="user">
+        <br> Male:
+        <input type="radio" name="sex" value="m">
+        <br> Female
+        <input type="radio" name="sex" value="f">
+        <br>
+    </form>
+    <pre>
+    	<code>
+    	/*select all input elements along with button*/
+        $(":input").css("background-color", "red");
+
+        /*select all radio type input element*/
+        $(":radio").wrap("&lt;span style='background-color:yellow'&gt;");
+       </code>
+    </pre>
+    <p>Note: We use jQuerys .wrap method to highlight the selected elements, because Firefox does not support background color on radiobuttons.</p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function() {
+
+        /*select all input elements along with button*/
+        $(":input").css("background-color", "red");
+
+        /*select all radio type input element*/
+        $(":radio").wrap("<span style='background-color:yellow'>");
+    });
+    </script>
+</body>
+
+</html>

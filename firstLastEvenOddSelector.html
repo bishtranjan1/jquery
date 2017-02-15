@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style type="text/css">
+    pre {
+        border: 1px solid;
+        box-shadow: 1px 1px 5px gray;
+    }
+    </style>
+</head>
+
+<body>
+    <h1>even odd selector</h1>
+    <table border="1">
+        <tr>
+            <th>Company</th>
+            <th>Country</th>
+        </tr>
+        <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Germany</td>
+        </tr>
+        <tr>
+            <td>Berglunds snabbköp</td>
+            <td>Sweden</td>
+        </tr>
+        <tr>
+            <td>Centro comercial Moctezuma</td>
+            <td>Mexico</td>
+        </tr>
+        <tr>
+            <td>Ernst Handel</td>
+            <td>Austria</td>
+        </tr>
+        <tr>
+            <td>Island Trading</td>
+            <td>UK</td>
+        </tr>
+    </table>
+    <div>
+        <p>fist</p>
+        <p>second</p>
+        <p>third</p>
+        <p>last</p>
+    </div>
+    <pre>
+       /*even selector*/
+        $("tr:even").css("background-color", "yellow");
+
+        /*odd selector*/
+        $("tr:odd").css("background-color", "red");
+
+        /*first selector*/
+        $("p:first").css("background-color", "blue"); 
+
+        /*last selector*/
+        $("p:last").css("background-color", "green");
+    </pre>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+    /*even selector*/
+    $("tr:even").css("background-color", "yellow");
+
+    /*odd selector*/
+    $("tr:odd").css("background-color", "red");
+    /*first selector*/
+    $("p:first").css("background-color", "blue");
+
+    /*last selector*/
+    $("p:last").css("background-color", "green");
+});
+</script>
+
+</html>

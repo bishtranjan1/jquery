@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style type="text/css">
+    pre {
+        border: 1px solid;
+        box-shadow: 1px 1px 5px gray;
+    }
+    </style>
+</head>
+
+<body>
+    <h1>Attribute Selector</h1>
+    <p class="intro">My name is Donald.</p>
+    <p id="place">I live in Duckburg.</p>
+    <p>My best friend is Mickey.</p>
+    Who is your favourite:
+    <ul id="choose">
+        <li>Goofy</li>
+        <li>Mickey</li>
+        <li>Pluto</li>
+    </ul>
+    <p title="this is first title">hi this is the demo text</p>
+    <p title="hi this is second title">hello this is the demo2 text</p>
+    <p title="this is amother title">hello this is the demo3 text</p>
+    <p title=" this is forth title for demo4">hello this is the demo4 text</p>
+    <pre>
+	  /*attribure Selector*/
+        $("[id]").css("background-color", "yellow");
+
+        /*attribure equals intro*/
+        $("[class=intro]").css("background-color", "red");
+        
+        /*contains first in title attribute*/
+        $("[title*=first]").css("background-color", "blue");
+        
+        /*starting with hi in title attribute*/
+        $("[title^=hi]").css("background-color", "green");
+        
+        /*endign with demo4  in title attribute*/
+        $("[title$=demo4]").css("background-color", "orange");
+
+</pre>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        /*attribure Selector*/
+        $("[id]").css("background-color", "yellow");
+        /*attribure equals intro*/
+        $("[class=intro]").css("background-color", "red");
+        /*contains first in title attribute*/
+        $("[title*=first]").css("background-color", "blue");
+        /*starting with hi in title attribute*/
+        $("[title^=hi]").css("background-color", "green");
+        /*endign with demo4  in title attribute*/
+        $("[title$=demo4]").css("background-color", "orange");
+    });
+    </script>
+</body>
+
+</html>

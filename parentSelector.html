@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+
+    //return direct parent element
+    $("span").parent().css({
+        "color": "red",
+        "border": "2px solid blue"
+    });
+
+    // returns all ancestor elements
+    $("span").parents().css({
+        "color": "red",
+        "border": "2px solid yellow"
+    });
+
+    // returns all ancestor elements that are ul
+    $("span").parents("ul").css({
+        "color": "red",
+        "border": "2px solid green"
+    });
+
+    // returns all ancestor elements between span and div
+    $("span").parentsUntil("div").css({
+        "color": "red",
+        "border": "2px solid blue"
+    });
+});
+</script>
+
+<head>
+    <style>
+    .ancestors * {
+        display: block;
+        border: 2px solid lightgrey;
+        color: lightgrey;
+        padding: 5px;
+        margin: 15px;
+    }
+    
+    .ancestors pre {
+        border: 1px solid black;
+        box-shadow: 1px 1px 5px gray;
+        color: black;
+    }
+    </style>
+</head>
+
+<body class="ancestors">body  
+    <div>div (great-great-grandparent)
+        <div style="width:500px;">div (great-grandparent)
+            <ul>ul (grandparent)
+                <li>li (direct parent)
+                    <span>span</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <pre>
+      /*return direct parent element*/
+    $("span").parent().css({"color": "red", "border": "2px solid blue"});
+
+    /*returns all ancestor elements*/
+    $("span").parents().css({"color": "red", "border": "2px solid green"});
+
+    /*returns all ancestor elements that are ul*/
+    $("span").parents("ul").css({"color": "red", "border": "2px solid green"});
+
+    /*returns all ancestor elements between span and div*/
+    $("span").parentsUntil("div").css({"color": "red", "border": "2px solid red"});
+
+    </pre>
+</body>
+
+</html>

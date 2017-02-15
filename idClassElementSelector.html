@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style type="text/css">
+    pre {
+        border: 1px solid;
+        box-shadow: 1px 1px 5px gray;
+    }
+    </style>
+</head>
+
+<body>
+    <h1>Jquery id selector</h1>
+    <p>My name is Ranjan </p>
+    <p id="name">I live in (id name)</p>
+    <p class="red">i love playing guitar(class red)</p>
+    <p>i love playing guitar</p>
+    <p class="red">Javascript is my favrouit language (class red)</p>
+    <pre>
+	/*id selector*/
+    $("#name").css("background-color", "yellow");
+     
+     /*class selecor*/
+     $(".red").css("background-color","red");
+     
+     /*element selector*/
+     $("h1").css("background-color","blue");
+
+</pre>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        /*id selector*/
+        $("#name").css("background-color", "yellow");
+
+        /*class selecor*/
+        $(".red").css("background-color", "red");
+
+        /*element selector*/
+        $("h1").css("background-color", "blue");
+
+
+    });
+    </script>
+</body>
+
+</html>
